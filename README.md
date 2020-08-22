@@ -23,4 +23,4 @@
   # Instalacion
    Luego de descargar los archivos, deberas de contar con NodeJS (v12 o superior), despues de esto, tendras que abrir una consola en la carpeta inicial y escribir ``npm i`` (Instala los archivos necesarios de los modulos), luego de eso, y de configurar con la claves y otros, escribir en la misma consola ``node .``
    
-   **!Un saludo¡**
+   **!Un saludo¡** 🍞
