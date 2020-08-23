@@ -3,6 +3,8 @@
  
  Con esta plantilla, puedes configurar tu organizacion, obtener informacion, crear roles para cada rango, etc.
 
+ Esta plantilla da uso al lenguaje Javascript, usando NodeJS, junto con Packages como: discord.js (Manejo de la API de discord), mongoose (herramienta de modelado de MongoDB), node-fetch (Realizar peticiones HTTP), entre otros. 
+
 # Aclaracion
  Esta plantilla esta centralizada en la plataforma de SA:MP, en tiempos futuros sera posible agregarlo 
  
