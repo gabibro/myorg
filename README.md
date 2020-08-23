@@ -6,7 +6,7 @@
  Esta plantilla da uso al lenguaje Javascript, usando NodeJS, junto con Packages como: discord.js (Manejo de la API de discord), mongoose (herramienta de modelado de MongoDB), node-fetch (Realizar peticiones HTTP), entre otros. 
 
 # Aclaracion
- Esta plantilla esta centralizada en la plataforma de SA:MP, en tiempos futuros sera posible agregarlo 
+ Esta plantilla esta centralizada en la plataforma de SA:MP, en tiempos futuros sera posible agregar otras plataformas
  
 # Configuraciones
  La aplicacion requiere de 3 claves principales: Las 2 claves de la pagina de [UN Player](https://unplayer.com/settings/keys), y la clave del bot de [Discord](https://discord.com/developers/applications/me)
@@ -23,7 +23,8 @@ exports.discordBot = {
 	token: 'client-token-here',
 	prefix: 'my!',
 	embedColor: 'BLUE',
-	embedImage: 'image-url'
+	embedImage: 'image-url',
+	roleColor: 'GREEN'
 }
 
  exports.mongoURI = 'mongoURI-here'
