@@ -44,27 +44,6 @@ module.exports = {
         }
 
        })
-     } else if(type === 'roles') {
-     
-     //Obtener datos guilds
-     let infoGuild = await models.guilds.findOne({ guildID: msg.guild.id })
-     let infoOrg = await api.getORG(infoGuild.plataform, infoGuild.organization.id)
-
-     console.log(infoGuild, infoOrg)
-
-     let mapRanks = infoOrg.ranks.map(r => '``Nombre: ``'+r.name+'\n``ID: ``'+r.id+'').join('\n')
-
-     let toCreateRanks = [{ rank_id: null, role_id: undefined, name: '[Rangos]' }]
-
-     infoOrg.ranks.map(r => {
-      toCreateRanks.push({ rank_id: r.id, role_id: 0, name: r.name })
-     })
-
-     console.log(toCreateRanks)
-
-     msg.channel.send(mapRanks)
-
-     }
-
-	}
+     } 
+}
 }
