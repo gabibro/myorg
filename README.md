@@ -43,6 +43,10 @@ exports.discordBot = {
  
   Puedes contactarme por Discord (gabi_bro_#9951) o por [Twitter](https://twitter.com/cheemsislive)
   
+ > No me se los comandos disponibles, ¿donde los encuentro?
+ 
+  Usando esta [mini-guia](https://github.com/gabibro/myorg/blob/master/docs/commands.md#lista-de-comandos) con la lista de comandos disponibles
+  
   # Instalacion
    Luego de descargar los archivos, deberas de contar con NodeJS (v12 o superior), despues de esto, tendras que abrir una consola en la carpeta inicial y escribir ``npm i`` (Instala los archivos necesarios de los modulos), luego de eso, y de configurar con la claves y otros, escribir en la misma consola ``node .``
    
