@@ -56,3 +56,50 @@ client.on('message', async (msg) => {
   	}
 
 })
+
+client.on('guildMemberAdd', async (member) => {
+
+  let infoUser = await api.getUser(member.user.id, 'discord')
+
+  if(infoUser) {
+
+  let userModel = require('./database/models/users')
+
+  let findUser = await userModel.findOne({ id: infoUser.ids.user })
+
+  if(!findUser) {
+    let newUser = new userModel({
+      userID: member.user.id,
+      id: infoUser.ids.user,
+      plataforms: {
+        forum: infoUser.ids.forum,
+        samp: infoUser.ids.samp,
+        gtav: infoUser.ids.gtav
+      },
+      name: member.user.username
+    })
+
+    newUser.save()
+    .then(() => console.log('Nuevo usuario registrado'))
+  }
+
+  if(infoUser.ids.samp !== false) {
+
+  let SAMPuserInfo = await api.getSAMPUser(findUser.plataforms.samp)
+  let findOrg = await (require('./database/models/organizations')).findOne({ guildID: member.guild.id })
+
+  if(findOrg && SAMPuserInfo.orgs[0].org_id === findOrg.id) {
+
+  let userRank = findOrg.roles.find(r => r.rank_id === SAMPuserInfo.orgs[0].rank_id)
+  let role = member.guild.roles.cache.get(userRank.role_id)
+  let roleGeneral = findOrg.roles.find(r => r.name === findOrg.name)
+
+  member.roles.add([role, roleGeneral.role_id])
+
+  }
+
+  }
+
+  }
+
+})
