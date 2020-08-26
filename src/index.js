@@ -94,11 +94,7 @@ client.on('guildMemberAdd', async (member) => {
   let role = member.guild.roles.cache.get(userRank.role_id)
   let roleGeneral = findOrg.roles.find(r => r.name === findOrg.name)
 
-  let name = `${SAMPuserInfo.name.split('_')[0]} ${SAMPuserInfo.name.split('_')[1]}`
-
-  member.setNickname(name).then(() => {
-     member.roles.add([role, roleGeneral.role_id])
-  })
+  member.roles.add([role, roleGeneral.role_id])
 
   }
 
