@@ -45,7 +45,11 @@ module.exports = {
      let hasPermission = msg.guild.me.permissions.has('MANAGE_ROLES')
      if(!hasPermission) return msg.channel.send('No tengo permisos para crear y editar roles')
 
-     if(infOrg.roles.length - 1 === dataOrg.ranks.length) return msg.channel.send('Ya se encuentran creado los roles')     
+     if(infOrg.roles.length - 1 === dataOrg.ranks.length) {
+
+     return msg.channel.send('Ya se encuentran creado los roles')
+
+     } else {
 
      dataOrg.ranks.map(async rank => {
 
@@ -100,6 +104,7 @@ module.exports = {
 
      })
  
+   }
   } 
  }
 }
