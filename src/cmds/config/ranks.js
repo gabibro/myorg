@@ -56,7 +56,7 @@ module.exports = {
      try {
 
      let guildHasRole = msg.guild.roles.cache.find(x => x.name === rank.name) ? true : false
-     if(guildHasRole) return undefined;
+     if(guildHasRole) { count.total++; count.rej++ }
 
      let role = await msg.guild.roles.create({
           data: {
