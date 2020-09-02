@@ -24,7 +24,7 @@ module.exports = {
         horas = horas.toString().slice(0, 2)
         minutos = minutos.toString().slice(0, 2)  
 
-      return `${dias}d ${horas}h ${minutos}m`
+      return `${dias}d, ${horas}h, ${minutos}m`
 
     }
 
@@ -32,7 +32,7 @@ module.exports = {
 
         let getTime = require('moment').duration(time)._data
 
-        return 'Hace '+getTime.days+'d, '+getTime.hours+'m, '+getTime.seconds+'s'
+        return 'Hace '+getTime.days+'d, '+getTime.hours+'h, '+getTime.minutes+'m'
 
     }
 
@@ -45,11 +45,11 @@ module.exports = {
     .addField('¿Usuario baneado?', userInfo.banned ? 'Si' : 'No')
     .addField('Tiempo jugado', getPlayedTime(userInfo.played_time), true)
     .addField('Certificado', typeCertification(userInfo.certification), true)
-    .addField('Estado', userInfo.online ? 'En linea' : 'Desconectado')
+    .addField('Estado', userInfo.online ? 'En linea' : 'Desconectado', true)
 
     if(!userInfo.online) {
 
-     embed.addField('Ultima conexion', getLastedPlayedTime(userInfo.last_seen)) 
+     embed.addField('Ultima conexion', getLastedPlayedTime(userInfo.last_seen), true) 
 
     }
 
