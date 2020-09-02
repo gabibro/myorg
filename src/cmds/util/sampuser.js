@@ -28,15 +28,30 @@ module.exports = {
 
     }
 
+    function getLastedPlayedTime(time) {
+
+        let getTime = require('moment').duration(time)._data
+
+        return 'Hace '+getTime.days+'d, '+getTime.hours+'m, '+getTime.seconds+'s'
+
+    }
+
     let embed = new MessageEmbed()
     .setFooter('Mensaje enviado', embedImage)
     .setTimestamp(Date.now())
+    .setColor(embedColor)
     .addField('Nombre', userInfo.name, true)
     .addField('Nivel', userInfo.level, true)
     .addField('¿Usuario baneado?', userInfo.banned ? 'Si' : 'No')
     .addField('Tiempo jugado', getPlayedTime(userInfo.played_time), true)
     .addField('Certificado', typeCertification(userInfo.certification), true)
-    .setColor(embedColor)
+    .addField('Estado', userInfo.online ? 'En linea' : 'Desconectado')
+
+    if(!userInfo.online) {
+
+     embed.addField('Ultima conexion', getLastedPlayedTime(userInfo.last_seen)) 
+
+    }
 
     msg.channel.send({ embed: embed })
 
