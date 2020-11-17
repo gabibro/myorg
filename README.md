@@ -1,12 +1,13 @@
+> **Nota importante:** Debido al cierre de la comunidad de [UnPlayer](https://unplayer.com), el repositorio deja de ser util, se quedara como recuerdo de la comunidad
+
+
+
 # MyOrg
  Plantilla de bot discord, dedicado a obtener datos de los miembros de UP.
  
  Con esta plantilla, puedes configurar tu organizacion, obtener informacion, crear roles para cada rango, etc.
 
  Esta plantilla da uso al lenguaje Javascript, usando NodeJS, junto con Packages como: discord.js (Manejo de la API de discord), mongoose (herramienta de modelado de MongoDB), node-fetch (Realizar peticiones HTTP), entre otros. este proyecto usa archivos separados, para tener una mejor organizacion del mismo
-
-# Aclaracion
- Esta plantilla esta centralizada en la plataforma de SA:MP, en tiempos futuros sera posible agregar otras plataformas
 
 # Caracteristicas
 > Configuracion de organizacion principal
