@@ -1,6 +1,10 @@
-> **Nota importante:** Debido al cierre de la comunidad de [UnPlayer](https://unplayer.com), el repositorio deja de ser util, se quedara como recuerdo de la comunidad
+---
 
+<h2 align="center">Nota importante</h2>
 
+Debido al cierre de la comunidad de SA:MP [UnPlayer](https://unplayer.com), el repositorio deja de actualizar y pierde su uso, no se borrara o archivar<
+
+---
 
 # MyOrg
  Plantilla de bot discord, dedicado a obtener datos de los miembros de UP.
