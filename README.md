@@ -2,7 +2,7 @@
 
 <h2 align="center">Nota importante</h2>
 
-Debido al cierre de la comunidad de SA:MP [UnPlayer](https://unplayer.com), el repositorio deja de actualizar y pierde su uso, no se borrara o archivar<
+Debido al cierre de la comunidad de SA:MP [UnPlayer](https://unplayer.com), el repositorio deja de actualizar y pierde su uso, no se borrara o archivar
 
 ---
 
